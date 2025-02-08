@@ -1,4 +1,5 @@
 flowchart TD
+    %% Applicant Eligibility Process
     A[Applicant Eligibility] --> B[Manufacturer/Producer]
     A --> C[Distributor/Trader]
     A --> D[Sub-contract Manufacturer]
@@ -6,16 +7,19 @@ flowchart TD
     A --> F[Food Premise]
     A --> G[Abattoir/Slaughter House]
 
+    %% Application Submission and Tracking
     H[Online Application Submission] --> I{Market Type?}
     I -->|National/International| J[Submit to JAKIM Halal Hub (Online)]
     I -->|Local Market| K[Submit to JAIN/MAIN (Direct)]
     J & K --> L[Application Tracking Dashboard]
 
+    %% Application Review and Decision
     L -->|Pending| M[Under Review]
     M -->|Approved| N[Generate Halal QR Code]
     N --> O[QR Code for Product, Certificate, or Premise]
     M -->|Rejected| P[View Reasons & Resubmit]
 
+    %% Reasons for Unsuccessful Applications
     Q[Reasons for Unsuccessful Applications] --> R[Company produces both Halal and Non-Halal products]
     Q --> S[Product is not Halal]
     Q --> T[Natural substances without processing]
@@ -25,10 +29,10 @@ flowchart TD
     Q --> X[Products with confusing terminologies]
     Q --> Y[Fertilizers and animal feed]
 
+    %% Required Forms and Documents
     Z[Required Forms] --> AA[Products / Consumer Goods]
     Z --> AB[Food Premise]
     Z --> AC[Slaughter House]
-
     AD[Required Documents] --> AE[Company Profile]
     AD --> AF[Company / Business Registration]
     AD --> AG[Name and Description of Product / Menu]
@@ -40,6 +44,7 @@ flowchart TD
     AD --> AM[Other Certificates (HACCP, ISO, GHP, GMP, TQM)]
     AD --> AN[Location Map of Premise / Factory]
 
+    %% Applicant Actions
     AO[Applicant Action] --> AP[Create a Halal Confirmation Certificate File]
     AP --> AQ[Store all relevant documents for inspection]
 
@@ -47,6 +52,5 @@ flowchart TD
     O --> AR[Verify QR Code Online]
     AR -->|Valid| AS[Show Halal Certification Details]
     AR -->|Invalid| AT[Flag for Investigation]
-
     L -->|Automated Notifications| AU[Email/SMS Updates]
     AU --> AV[Applicant Notified at Each Stage]
